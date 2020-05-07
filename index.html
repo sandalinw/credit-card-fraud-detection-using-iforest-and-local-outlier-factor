@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+	<body>
+
+		<div class="container">
+			    <form id ="contact" action="{{ url_for('predict')}}"method="post">
+    				<h3>A Credit Card Fraud Prediction</h3>
+
+    				<fieldset>
+      				<input placeholder="Time" type="number" step="any" tabindex="1" required="required" >
+    				</fieldset>
+
+    				<fieldset>
+      				<input placeholder="Amount" type="number" step="any" tabindex="2" required="required">
+    				</fieldset>
+
+    				<fieldset>
+      				<button name="predict" type="submit" id="contact-submit" >Predict</button>
+
+    				</fieldset>
+
+
+  </form>
+	<br>
+	<br>
+				{{ prediction_text }}
+</div>
+
+	</body>
+
+
+</html>
+
+
+
+
+
+
+
+
